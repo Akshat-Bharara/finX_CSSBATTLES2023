@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      font-family: arial;
+    }
+
+    .container {
+      display: flex;
+      gap: .3rem;
+      align-items: flex-end;
+      /* justify-content: flex-end; */
+    }
+
+    .container > div {
+      background: #ddd;
+      width: 80pt;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      font-size: 2.5em;
+      font-weight: 900;
+      position: relative;
+
+    }
+
+    .container div:nth-child(1) {
+      height: 60pt;
+}.container div:nth-child(2) {
+  top: 5pt;
+  height: 80pt;
+
+}
+
+.container div::before {
+  --height: .8rem;
+  content: "";
+  position: absolute;
+  display: block;
+  height: var(--height);
+  background: red;
+  top: calc(-1 * (var(--height) + .3rem));
+  width: 100%;
+}
+
+.container div:nth-child(1)::before {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+  background: silver;
+}
+
+.container div:nth-child(2)::before {
+  clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+  background: #ffe600;
+}
+
+.container div:nth-child(3)::before {
+  background: #d58746;
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+}
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>2</div>
+    <div>1</div>
+    <div>3</div>
+  </div>
+</body>
+</html>

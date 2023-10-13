@@ -1,0 +1,64 @@
+:root {
+    --icon-background: purple;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .icon {
+    background: var(--icon-background);
+    display: flex;
+    justify-content: flex-end;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+    
+  }
+  
+  .yellow_side {
+    background-color: yellow;
+    height: 200%;
+    width: 100%;
+    transform: translate(150px, -150px);
+  
+    
+  }
+  .yellow_side:before {
+      background-color: yellow;
+      border-top-left-radius: 1200px;
+      border-bottom-left-radius: 30px;
+      content: "";
+      display: block;
+      height: 400px;
+      width: 400px;
+      transform: translate(-40px, -80px);
+    }
+  .eyes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+  
+    
+  }
+.eyes .eye {
+      background:yellow;
+      border-radius: 100%;
+      height: 20px;
+      width: 20px;
+      margin: 0 70px;
+  
+      
+    }
+    
+    .eye.right {
+        background-color: purple;
+        transform: translateX(-20px);
+      }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    .container {
+      background: linear-gradient(#27262b, #5a5a85);
+      height: 500pt;
+      width: 300pt;
+      display: flex;
+      align-items: flex-end;;
+      justify-content: space-between;
+      padding: 2rem 0;
+      gap: 1rem;
+
+    }
+
+    .container div {
+      padding: .6rem;
+      background: #242527;
+      flex-grow: 1;
+      display: grid;
+      gap: .5rem;
+      height: 300pt;
+      position: relative;
+      /* overflow: visible; */
+    }
+
+    .container div::before {
+      content: "";
+      position: absolute;
+      height: 40pt;
+      width: 100%;
+      background: #242527;
+      /* top: -100%; */
+      left: 0;
+      transform: translateY(-100%);
+    }
+
+    .container span {
+      background: #4c4a4a;
+
+    }
+
+    
+    .container div:nth-child(1) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      
+}
+.container div:nth-child(2) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(9, 1fr);
+    height: 400pt;
+}
+.container div:nth-child(3) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(5, 1fr);}
+
+
+    
+
+      
+    .container div:nth-child(1)::before {
+      clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+.container div:nth-child(2)::before {
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+.container div:nth-child(3)::before {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+
+}
+
+.container div:nth-child(1) span:nth-child(3),
+.container div:nth-child(1) span:nth-child(4),
+.container div:nth-child(1) span:nth-child(8),
+
+.container div:nth-child(2) span:nth-child(1),
+.container div:nth-child(2) span:nth-child(5),
+.container div:nth-child(2) span:nth-child(6), 
+.container div:nth-child(2) span:nth-child(10), 
+.container div:nth-child(2) span:nth-child(13), 
+.container div:nth-child(2) span:nth-child(16),
+
+.container div:nth-child(3) span:nth-child(1),
+.container div:nth-child(3) span:nth-child(4),
+.container div:nth-child(3) span:nth-child(11),
+.container div:nth-child(3) span:nth-child(14) 
+{
+  background: #fafa6a;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  </div>
+</body>
+</html>
